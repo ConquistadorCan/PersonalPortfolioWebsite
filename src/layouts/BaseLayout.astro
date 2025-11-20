@@ -1,0 +1,25 @@
+---
+import { SITE_TITLE } from "../config/consts";
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{SITE_TITLE}</title>
+  </head>
+  <body
+    class="flex flex-col min-h-screen mx-auto w-3xl bg-[#222831] text-[#DFD0B8]"
+  >
+    <Navigation />
+    <main class="flex-grow">
+      <script></script>
+    </main>
+    <Footer />
+  </body>
+</html>

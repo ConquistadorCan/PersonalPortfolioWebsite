@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon/components";
+import {
+    SITE_OWNER_NAME,
+    SITE_OWNER_SURNAME,
+    SITE_OWNER_EMAIL,
+    SITE_OWNER_GITHUB,
+    SITE_OWNER_LINKEDIN,
+    CURRENT_YEAR,
+} from "../config/consts";
+---
+
+<footer class="flex flex-col items-center justify-center gap-4">
+    <div class="flex justify-center gap-14">
+        <a href={`mailto:${SITE_OWNER_EMAIL}`}>
+            <Icon name="email" class="text-4xl hover:[color:#948979]" />
+        </a>
+        <a href={SITE_OWNER_GITHUB}>
+            <Icon name="github" class="text-4xl hover:[color:#948979]" />
+        </a>
+        <a href={SITE_OWNER_LINKEDIN}>
+            <Icon name="linkedin" class="text-4xl hover:[color:#948979]" />
+        </a>
+    </div>
+    <p>
+        © {CURRENT_YEAR}
+        {SITE_OWNER_NAME}
+        {SITE_OWNER_SURNAME}. All rights reserved.
+    </p>
+</footer>
