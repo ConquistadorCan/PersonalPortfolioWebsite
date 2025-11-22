@@ -6,3 +6,5 @@ export const SITE_OWNER_EMAIL = "canmustafafatih@gmail.com"
 export const SITE_OWNER_GITHUB = "https://github.com/ConquistadorCan"
 export const SITE_OWNER_LINKEDIN = "https://www.linkedin.com/in/mustafafatihcan/"
 export const CURRENT_YEAR = new Date().getFullYear()
+const SITE_OWNER_HOW_OLD = CURRENT_YEAR - 2002
+export const SITE_OWNER_PRESENTATION = `I am a ${SITE_OWNER_HOW_OLD} years old software engineer focused on building clean and modern web experiences.`

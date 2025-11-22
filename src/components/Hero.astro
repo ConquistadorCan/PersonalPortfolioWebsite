@@ -1,0 +1,228 @@
+---
+import {
+    SITE_OWNER_NAME,
+    SITE_OWNER_SURNAME,
+    SITE_OWNER_PRESENTATION,
+} from "../config/consts";
+import { SKILLS, PROJECTS } from "../config/data";
+---
+
+<div class="flex flex-col gap-32 py-20 px-4 md:px-0">
+    <!-- Intro Section -->
+    <section
+        class="min-h-[60vh] flex flex-col justify-center items-start gap-6 animate-fade-in"
+    >
+        <div class="space-y-4">
+            <p
+                class="text-[#948979] text-xl md:text-2xl font-medium tracking-widest uppercase flex items-center gap-3"
+            >
+                <span class="w-12 h-[2px] bg-[#948979]"></span>
+                Hi, I am
+            </p>
+            <h1
+                class="text-5xl md:text-7xl font-bold text-[#DFD0B8] leading-tight"
+            >
+                {SITE_OWNER_NAME}
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-[#948979] to-[#DFD0B8]"
+                >
+                    {SITE_OWNER_SURNAME}
+                </span>
+            </h1>
+        </div>
+
+        <p class="text-xl text-[#DFD0B8]/80 max-w-2xl leading-relaxed">
+            {SITE_OWNER_PRESENTATION}
+        </p>
+
+        <div class="flex gap-4 mt-8">
+            <a
+                href="#skills"
+                class="px-8 py-3 border-2 border-[#948979] text-[#DFD0B8] rounded hover:bg-[#948979] hover:text-[#222831] transition-all duration-300 font-medium"
+            >
+                Skills
+            </a>
+            <a
+                href="#projects"
+                class="px-8 py-3 border-2 border-[#948979] text-[#DFD0B8] rounded hover:bg-[#948979] hover:text-[#222831] transition-all duration-300 font-medium"
+            >
+                Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="scroll-mt-20">
+        <h2
+            class="text-3xl font-bold text-[#DFD0B8] mb-12 border-b border-[#393E46] pb-4 inline-block"
+        >
+            Technical Skills
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Frontend -->
+            <div
+                class="bg-[#393E46] p-6 rounded-lg hover:transform hover:-translate-y-1 transition-all duration-300"
+            >
+                <h3 class="text-[#948979] text-xl font-bold mb-4">
+                    Frontend Development
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    {
+                        SKILLS.frontend.map((skill) => (
+                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30">
+                                {skill}
+                            </span>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div
+                class="bg-[#393E46] p-6 rounded-lg hover:transform hover:-translate-y-1 transition-all duration-300"
+            >
+                <h3 class="text-[#948979] text-xl font-bold mb-4">
+                    Backend Development
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    {
+                        SKILLS.backend.map((skill) => (
+                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30">
+                                {skill}
+                            </span>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <!-- Game Dev -->
+            <div
+                class="bg-[#393E46] p-6 rounded-lg hover:transform hover:-translate-y-1 transition-all duration-300"
+            >
+                <h3 class="text-[#948979] text-xl font-bold mb-4">
+                    Game Development
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    {
+                        SKILLS.gameDev.map((skill) => (
+                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30">
+                                {skill}
+                            </span>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <!-- DevOps -->
+            <div
+                class="bg-[#393E46] p-6 rounded-lg hover:transform hover:-translate-y-1 transition-all duration-300"
+            >
+                <h3 class="text-[#948979] text-xl font-bold mb-4">
+                    DevOps & Tools
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    {
+                        SKILLS.devOps.map((skill) => (
+                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30">
+                                {skill}
+                            </span>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="scroll-mt-20">
+        <h2
+            class="text-3xl font-bold text-[#DFD0B8] mb-12 border-b border-[#393E46] pb-4 inline-block"
+        >
+            Featured Projects
+        </h2>
+
+        <div class="space-y-16">
+            <!-- Professional -->
+            <div>
+                <h3
+                    class="text-2xl text-[#DFD0B8] font-semibold mb-6 flex items-center gap-3"
+                >
+                    <span class="w-2 h-8 bg-[#948979] rounded-full"></span>
+                    Professional Level
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {
+                        PROJECTS.professional.map((project) => (
+                            <a
+                                href={project.link}
+                                class="group block bg-[#393E46] p-6 rounded-lg hover:bg-[#393E46]/80 transition-all duration-300"
+                            >
+                                <h4 class="text-xl font-bold text-[#948979] group-hover:text-[#DFD0B8] transition-colors mb-2">
+                                    {project.title}
+                                </h4>
+                                <p class="text-[#DFD0B8]/70">
+                                    {project.description}
+                                </p>
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <!-- Intermediate -->
+            <div>
+                <h3
+                    class="text-2xl text-[#DFD0B8] font-semibold mb-6 flex items-center gap-3"
+                >
+                    <span class="w-2 h-8 bg-[#948979]/70 rounded-full"></span>
+                    Intermediate Level
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {
+                        PROJECTS.intermediate.map((project) => (
+                            <a
+                                href={project.link}
+                                class="group block bg-[#393E46] p-6 rounded-lg hover:bg-[#393E46]/80 transition-all duration-300"
+                            >
+                                <h4 class="text-xl font-bold text-[#948979] group-hover:text-[#DFD0B8] transition-colors mb-2">
+                                    {project.title}
+                                </h4>
+                                <p class="text-[#DFD0B8]/70">
+                                    {project.description}
+                                </p>
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <!-- Beginning -->
+            <div>
+                <h3
+                    class="text-2xl text-[#DFD0B8] font-semibold mb-6 flex items-center gap-3"
+                >
+                    <span class="w-2 h-8 bg-[#948979]/40 rounded-full"></span>
+                    Beginning Level
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {
+                        PROJECTS.beginning.map((project) => (
+                            <a
+                                href={project.link}
+                                class="group block bg-[#393E46] p-6 rounded-lg hover:bg-[#393E46]/80 transition-all duration-300"
+                            >
+                                <h4 class="text-xl font-bold text-[#948979] group-hover:text-[#DFD0B8] transition-colors mb-2">
+                                    {project.title}
+                                </h4>
+                                <p class="text-[#DFD0B8]/70">
+                                    {project.description}
+                                </p>
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
