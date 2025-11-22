@@ -1,3 +1,5 @@
+export const EXPERIENCE = "1.5 Years";
+
 export const SKILLS = {
   frontend: [
     "HTML",
@@ -27,7 +29,17 @@ export const SKILLS = {
   ]
 };
 
-export const PROJECTS = {
+export interface Project {
+  title: string;
+  description: string;
+  link: string;
+}
+
+export const PROJECTS: {
+  beginning: Project[];
+  intermediate: Project[];
+  professional: Project[];
+} = {
   beginning: [
     {
       title: "Seesaw Simulation",

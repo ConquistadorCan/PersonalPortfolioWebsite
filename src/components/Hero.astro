@@ -4,20 +4,48 @@ import {
     SITE_OWNER_SURNAME,
     SITE_OWNER_PRESENTATION,
 } from "../config/consts";
-import { SKILLS, PROJECTS } from "../config/data";
+import { SKILLS, PROJECTS, EXPERIENCE } from "../config/data";
+import mfcAvatar from "../icons/mfc_avatar.png";
 ---
 
 <div class="flex flex-col gap-32 py-20 px-4 md:px-0">
     <!-- Intro Section -->
     <section
-        class="min-h-[60vh] flex flex-col justify-center items-start gap-6 animate-fade-in"
+        id="home"
+        class="min-h-screen flex flex-col justify-center items-center text-center gap-8 animate-fade-in relative overflow-hidden"
     >
-        <div class="space-y-4">
+        <!-- Animated Background Element -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-[#948979]/20 to-[#DFD0B8]/20 rounded-full blur-3xl animate-pulse -z-10"
+        >
+        </div>
+
+        <!-- Avatar/Animation Placeholder -->
+        <div
+            class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-[#948979] to-[#DFD0B8] p-1 shadow-xl mb-8 animate-float"
+        >
+            <div
+                class="w-full h-full rounded-full flex items-center justify-center overflow-hidden relative"
+            >
+                <img
+                    src={mfcAvatar.src}
+                    alt="Avatar"
+                    class="w-full h-full object-cover"
+                />
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-transparent via-[#DFD0B8]/10 to-transparent"
+                >
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-4 max-w-3xl mx-auto">
             <p
-                class="text-[#948979] text-xl md:text-2xl font-medium tracking-widest uppercase flex items-center gap-3"
+                class="text-[#948979] text-xl md:text-2xl font-medium tracking-widest uppercase flex items-center justify-center gap-3"
             >
                 <span class="w-12 h-[2px] bg-[#948979]"></span>
                 Hi, I am
+                <span class="w-12 h-[2px] bg-[#948979]"></span>
             </p>
             <h1
                 class="text-5xl md:text-7xl font-bold text-[#DFD0B8] leading-tight"
@@ -31,9 +59,19 @@ import { SKILLS, PROJECTS } from "../config/data";
             </h1>
         </div>
 
-        <p class="text-xl text-[#DFD0B8]/80 max-w-2xl leading-relaxed">
+        <p class="text-xl text-[#DFD0B8]/80 max-w-2xl leading-relaxed mx-auto">
             {SITE_OWNER_PRESENTATION}
         </p>
+
+        <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-[#393E46]/50 rounded-full border border-[#948979]/30 backdrop-blur-sm"
+        >
+            <span class="w-2 h-2 rounded-full bg-[#948979] animate-pulse"
+            ></span>
+            <span class="text-[#DFD0B8] font-medium"
+                >{EXPERIENCE} Professional Experience</span
+            >
+        </div>
 
         <div class="flex gap-4 mt-8">
             <a
@@ -67,10 +105,10 @@ import { SKILLS, PROJECTS } from "../config/data";
                 <h3 class="text-[#948979] text-xl font-bold mb-4">
                     Frontend Development
                 </h3>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-3">
                     {
                         SKILLS.frontend.map((skill) => (
-                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30">
+                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30 hover:border-[#948979] transition-colors">
                                 {skill}
                             </span>
                         ))
@@ -85,10 +123,10 @@ import { SKILLS, PROJECTS } from "../config/data";
                 <h3 class="text-[#948979] text-xl font-bold mb-4">
                     Backend Development
                 </h3>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-3">
                     {
                         SKILLS.backend.map((skill) => (
-                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30">
+                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30 hover:border-[#948979] transition-colors">
                                 {skill}
                             </span>
                         ))
@@ -103,10 +141,10 @@ import { SKILLS, PROJECTS } from "../config/data";
                 <h3 class="text-[#948979] text-xl font-bold mb-4">
                     Game Development
                 </h3>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-3">
                     {
                         SKILLS.gameDev.map((skill) => (
-                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30">
+                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30 hover:border-[#948979] transition-colors">
                                 {skill}
                             </span>
                         ))
@@ -121,10 +159,10 @@ import { SKILLS, PROJECTS } from "../config/data";
                 <h3 class="text-[#948979] text-xl font-bold mb-4">
                     DevOps & Tools
                 </h3>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-3">
                     {
                         SKILLS.devOps.map((skill) => (
-                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30">
+                            <span class="px-3 py-1 bg-[#222831] text-[#DFD0B8] text-sm rounded border border-[#948979]/30 hover:border-[#948979] transition-colors">
                                 {skill}
                             </span>
                         ))
@@ -144,85 +182,109 @@ import { SKILLS, PROJECTS } from "../config/data";
 
         <div class="space-y-16">
             <!-- Professional -->
-            <div>
-                <h3
-                    class="text-2xl text-[#DFD0B8] font-semibold mb-6 flex items-center gap-3"
-                >
-                    <span class="w-2 h-8 bg-[#948979] rounded-full"></span>
-                    Professional Level
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {
-                        PROJECTS.professional.map((project) => (
-                            <a
-                                href={project.link}
-                                class="group block bg-[#393E46] p-6 rounded-lg hover:bg-[#393E46]/80 transition-all duration-300"
-                            >
-                                <h4 class="text-xl font-bold text-[#948979] group-hover:text-[#DFD0B8] transition-colors mb-2">
-                                    {project.title}
-                                </h4>
-                                <p class="text-[#DFD0B8]/70">
-                                    {project.description}
-                                </p>
-                            </a>
-                        ))
-                    }
-                </div>
-            </div>
+            {
+                PROJECTS.professional.length > 0 && (
+                    <div>
+                        <h3 class="text-2xl text-[#DFD0B8] font-semibold mb-6 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-[#948979] rounded-full" />
+                            Professional Level
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {PROJECTS.professional.map((project) => (
+                                <a
+                                    href={project.link}
+                                    class="group block bg-[#393E46] p-6 rounded-lg hover:bg-[#393E46]/80 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                                >
+                                    <h4 class="text-xl font-bold text-[#948979] group-hover:text-[#DFD0B8] transition-colors mb-3">
+                                        {project.title}
+                                    </h4>
+                                    <p class="text-[#DFD0B8]/70">
+                                        {project.description}
+                                    </p>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                )
+            }
 
             <!-- Intermediate -->
-            <div>
-                <h3
-                    class="text-2xl text-[#DFD0B8] font-semibold mb-6 flex items-center gap-3"
-                >
-                    <span class="w-2 h-8 bg-[#948979]/70 rounded-full"></span>
-                    Intermediate Level
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {
-                        PROJECTS.intermediate.map((project) => (
-                            <a
-                                href={project.link}
-                                class="group block bg-[#393E46] p-6 rounded-lg hover:bg-[#393E46]/80 transition-all duration-300"
-                            >
-                                <h4 class="text-xl font-bold text-[#948979] group-hover:text-[#DFD0B8] transition-colors mb-2">
-                                    {project.title}
-                                </h4>
-                                <p class="text-[#DFD0B8]/70">
-                                    {project.description}
-                                </p>
-                            </a>
-                        ))
-                    }
-                </div>
-            </div>
+            {
+                PROJECTS.intermediate.length > 0 && (
+                    <div>
+                        <h3 class="text-2xl text-[#DFD0B8] font-semibold mb-6 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-[#948979]/70 rounded-full" />
+                            Intermediate Level
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {PROJECTS.intermediate.map((project) => (
+                                <a
+                                    href={project.link}
+                                    class="group block bg-[#393E46] p-6 rounded-lg hover:bg-[#393E46]/80 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                                >
+                                    <h4 class="text-xl font-bold text-[#948979] group-hover:text-[#DFD0B8] transition-colors mb-3">
+                                        {project.title}
+                                    </h4>
+                                    <p class="text-[#DFD0B8]/70">
+                                        {project.description}
+                                    </p>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                )
+            }
 
             <!-- Beginning -->
-            <div>
-                <h3
-                    class="text-2xl text-[#DFD0B8] font-semibold mb-6 flex items-center gap-3"
-                >
-                    <span class="w-2 h-8 bg-[#948979]/40 rounded-full"></span>
-                    Beginning Level
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {
-                        PROJECTS.beginning.map((project) => (
-                            <a
-                                href={project.link}
-                                class="group block bg-[#393E46] p-6 rounded-lg hover:bg-[#393E46]/80 transition-all duration-300"
-                            >
-                                <h4 class="text-xl font-bold text-[#948979] group-hover:text-[#DFD0B8] transition-colors mb-2">
-                                    {project.title}
-                                </h4>
-                                <p class="text-[#DFD0B8]/70">
-                                    {project.description}
-                                </p>
-                            </a>
-                        ))
-                    }
-                </div>
-            </div>
+            {
+                PROJECTS.beginning.length > 0 && (
+                    <div>
+                        <h3 class="text-2xl text-[#DFD0B8] font-semibold mb-6 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-[#948979]/40 rounded-full" />
+                            Beginning Level
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {PROJECTS.beginning.map((project) => (
+                                <a
+                                    href={project.link}
+                                    class="group block bg-[#393E46] p-6 rounded-lg hover:bg-[#393E46]/80 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                                >
+                                    <h4 class="text-xl font-bold text-[#948979] group-hover:text-[#DFD0B8] transition-colors mb-3">
+                                        {project.title}
+                                    </h4>
+                                    <p class="text-[#DFD0B8]/70">
+                                        {project.description}
+                                    </p>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                )
+            }
         </div>
     </section>
 </div>
+
+<script>
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute("id");
+                if (id && id !== "home") {
+                    history.replaceState(null, "", `#${id}`);
+                } else if (id === "home") {
+                    history.replaceState(null, "", " ");
+                }
+            }
+        });
+    }, observerOptions);
+
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => observer.observe(section));
+</script>
