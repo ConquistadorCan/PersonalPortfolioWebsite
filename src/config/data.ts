@@ -13,11 +13,13 @@ export const SKILLS = {
   backend: [
     "Python",
     "Java",
+    "Spring Boot",
     "FastAPI",
     "REST API Development",
     "MQTT",
     "PostgreSQL",
-    "MongoDB"
+    "MongoDB",
+    "ROS2"
   ],
   gameDev: ["Unity", "C#"],
   devOps: [
@@ -52,7 +54,23 @@ export const PROJECTS: {
       link: "#",
     },
   ],
-  intermediate: [],
+  intermediate: [
+    {
+      title: "Cargo Management API",
+      description: "A cargo management API built with Spring Boot.",
+      link: "https://github.com/ConquistadorCan/cargo-management-api",
+    },
+    {
+      title: "Obstacle Avoidance Algorithms Project",
+      description: "Developed an obstacle avoidance algorithms project with ROS2 and gazebo.",
+      link: "https://github.com/ConquistadorCan/Obstacle-Avoidance",
+    },
+    {
+      title: "Data Replication Experiment With MongoDB",
+      description: "Developed a data replication experiment with MongoDB.",
+      link: "https://github.com/ConquistadorCan/DataReplicationExperiments",
+    }
+  ],
   professional: [
     {
       title: "Drone Automation Web App",
