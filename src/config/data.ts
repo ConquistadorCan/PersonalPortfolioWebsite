@@ -8,7 +8,7 @@ export const SKILLS = {
     "TypeScript",
     "React",
     "Astro",
-    "TailwindCSS"
+    "TailwindCSS",
   ],
   backend: [
     "Python",
@@ -19,16 +19,10 @@ export const SKILLS = {
     "MQTT",
     "PostgreSQL",
     "MongoDB",
-    "ROS2"
+    "ROS2",
   ],
   gameDev: ["Unity", "C#"],
-  devOps: [
-    "Docker",
-    "Git",
-    "GitHub Actions",
-    "CI/CD",
-    "Google Cloud"
-  ]
+  devOps: ["Docker", "Git", "GitHub Actions", "CI/CD", "Google Cloud"],
 };
 
 export interface Project {
@@ -45,7 +39,8 @@ export const PROJECTS: {
   beginning: [
     {
       title: "Seesaw Simulation",
-      description: "A seesaw simulation game built with pure HTML, CSS, and JavaScript.",
+      description:
+        "A seesaw simulation game built with pure HTML, CSS, and JavaScript.",
       link: "https://conquistadorcan.github.io/SeesawSimulation/",
     },
     {
@@ -56,27 +51,34 @@ export const PROJECTS: {
   ],
   intermediate: [
     {
+      title: "JAT — Job Application Tracker",
+      description:
+        "A job application tracker built with vanilla HTML, JavaScript, and Tailwind CSS. Features include real-time search, status filtering, table sorting, localStorage persistence, and a settings page.",
+      link: "https://github.com/ConquistadorCan/job-tracker",
+    },
+    {
       title: "Cargo Management API",
       description: "A cargo management API built with Spring Boot.",
       link: "https://github.com/ConquistadorCan/cargo-management-api",
     },
     {
       title: "Obstacle Avoidance Algorithms Project",
-      description: "Developed an obstacle avoidance algorithms project with ROS2 and gazebo.",
+      description:
+        "Developed an obstacle avoidance algorithms project with ROS2 and gazebo.",
       link: "https://github.com/ConquistadorCan/Obstacle-Avoidance",
     },
     {
       title: "Data Replication Experiment With MongoDB",
       description: "Developed a data replication experiment with MongoDB.",
       link: "https://github.com/ConquistadorCan/DataReplicationExperiments",
-    }
+    },
   ],
   professional: [
     {
       title: "Drone Automation Web App",
-      description: "Developed a backend system for drone automation and web control at my previous company, using Python, Docker, and cloud deployment.",
+      description:
+        "Developed a backend system for drone automation and web control at my previous company, using Python, Docker, and cloud deployment.",
       link: "#",
     },
   ],
 };
-
