@@ -53,7 +53,7 @@ export const PROJECTS: {
     {
       title: "JAT — Job Application Tracker",
       description:
-        "A job application tracker built with vanilla HTML, JavaScript, and Tailwind CSS. Features include real-time search, status filtering, table sorting, localStorage persistence, and a settings page.",
+        "A job application tracker built with vanilla HTML, JavaScript, and Tailwind CSS.",
       link: "https://github.com/ConquistadorCan/job-tracker",
     },
     {
@@ -71,6 +71,12 @@ export const PROJECTS: {
       title: "Data Replication Experiment With MongoDB",
       description: "Developed a data replication experiment with MongoDB.",
       link: "https://github.com/ConquistadorCan/DataReplicationExperiments",
+    },
+    {
+      title: "Kasaio — Personal Finance Tracker",
+      description:
+        "A desktop application for tracking personal income, expenses, and investments. Built with Tauri v2, React, and a Python FastAPI sidecar embedded via PyInstaller.",
+      link: "https://github.com/ConquistadorCan/kasaio",
     },
   ],
   professional: [
