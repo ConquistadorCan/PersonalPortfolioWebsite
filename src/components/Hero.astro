@@ -6,6 +6,7 @@ import {
 } from "../config/consts";
 import { SKILLS, PROJECTS, EXPERIENCE } from "../config/data";
 import mfcAvatar from "../icons/mfc_avatar.png";
+import ResumeSection from "./ResumeSection.astro";
 ---
 
 <div class="flex flex-col gap-32 py-20 px-4 md:px-0">
@@ -71,7 +72,7 @@ import mfcAvatar from "../icons/mfc_avatar.png";
       >
     </div>
 
-    <div class="flex gap-4 mt-8">
+    <div class="flex flex-wrap justify-center gap-4 mt-8">
       <a
         href="#skills"
         class="px-8 py-3 border-2 border-[#948979] text-[#DFD0B8] rounded hover:bg-[#948979] hover:text-[#222831] transition-all duration-300 font-medium"
@@ -83,6 +84,12 @@ import mfcAvatar from "../icons/mfc_avatar.png";
         class="px-8 py-3 border-2 border-[#948979] text-[#DFD0B8] rounded hover:bg-[#948979] hover:text-[#222831] transition-all duration-300 font-medium"
       >
         Projects
+      </a>
+      <a
+        href="#resume"
+        class="px-8 py-3 border-2 border-[#948979] text-[#DFD0B8] rounded hover:bg-[#948979] hover:text-[#222831] transition-all duration-300 font-medium"
+      >
+        Resume
       </a>
     </div>
   </section>
@@ -251,6 +258,9 @@ import mfcAvatar from "../icons/mfc_avatar.png";
       }
     </div>
   </section>
+
+  <!-- Resume Section -->
+  <ResumeSection />
 </div>
 
 <script define:vars={{ SITE_OWNER_BIRTH_YEAR }}>
